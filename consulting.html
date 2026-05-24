@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pool Build Pro | Pool Construction Consulting – New York</title>
+  <meta name="description" content="Hiring a pool contractor? Get an expert in your corner. Bid reviews, build oversight, and SOS audits from a 10-year pool construction veteran and Army vet.">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0a1628;
+      --blue: #1a3a5c;
+      --gold: #c9a84c;
+      --white: #ffffff;
+      --off-white: #f8f6f1;
+      --gray: #6b7280;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--navy); background: var(--white); }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo { color: var(--white); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; }
+    .nav-logo span { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 10px 24px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 100px 40px 80px;
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(201,168,76,0.15);
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 24px;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .hero p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #a0aec0;
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .btn-ghost {
+      border: 1px solid #4a5568;
+      color: var(--white);
+      padding: 16px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    /* STATS */
+    .stats {
+      background: var(--off-white);
+      padding: 48px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 72px;
+      flex-wrap: wrap;
+    }
+    .stat { text-align: center; }
+    .stat-num { font-family: 'Playfair Display', serif; font-size: 2.4rem; font-weight: 700; color: var(--navy); }
+    .stat-label { font-size: 0.82rem; color: var(--gray); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ABOUT */
+    .about { padding: 80px 40px; max-width: 760px; margin: 0 auto; }
+    .section-tag {
+      font-size: 0.72rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    .about h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 20px; line-height: 1.3; }
+    .about p { font-size: 1rem; line-height: 1.85; color: #4a5568; margin-bottom: 16px; }
+    .about strong { color: var(--navy); }
+
+    /* SERVICES */
+    .services { background: var(--off-white); padding: 80px 40px; }
+    .services-inner { max-width: 760px; margin: 0 auto; }
+    .services h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 12px; }
+    .services .sub { font-size: 0.95rem; color: var(--gray); margin-bottom: 48px; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 36px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+    }
+    .service-card:hover { border-color: var(--gold); }
+    .service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .service-card p { font-size: 0.9rem; color: #4a5568; line-height: 1.7; max-width: 480px; }
+    .service-price { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+
+    /* WHO */
+    .who { padding: 80px 40px; max-width: 760px; margin: 0 auto; }
+    .who h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 36px; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .who-item { border-left: 3px solid var(--gold); padding-left: 20px; }
+    .who-item h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 8px; }
+    .who-item p { font-size: 0.88rem; color: #4a5568; line-height: 1.65; }
+
+    /* CONTACT */
+    .contact { background: var(--navy); color: var(--white); padding: 80px 40px; text-align: center; }
+    .contact-inner { max-width: 600px; margin: 0 auto; }
+    .contact h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 16px; }
+    .contact p { color: #a0aec0; font-size: 1rem; line-height: 1.7; margin-bottom: 40px; }
+    .contact-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+    .contact-info { color: #4a5568; font-size: 0.88rem; line-height: 2; }
+
+    footer { background: #060e1a; text-align: center; padding: 20px; font-size: 0.75rem; color: #4a5568; }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.1rem; }
+      .who-grid { grid-template-columns: 1fr; }
+      .service-card { flex-direction: column; }
+      nav { padding: 16px 20px; }
+      .stats { gap: 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">Pool Build <span>Pro</span></div>
+    <a class="nav-cta" href="tel:6319491210">Call (631) 949-1210</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-badge">🇺🇸 Army Veteran · Pool Construction Expert</div>
+    <h1>Hiring a pool contractor?<br><em>Get someone in your corner.</em></h1>
+    <p>I review bids, flag red flags, and keep contractors accountable — so your $80,000 pool doesn't turn into a nightmare. 10+ years on New York job sites.</p>
+    <div class="hero-btns">
+      <a class="btn-gold" href="tel:6319491210">Call or Text Me</a>
+      <a class="btn-ghost" href="mailto:Tjjmilich@icloud.com">Email Me</a>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">10+</div>
+      <div class="stat-label">Years in pool construction</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">On the homeowner's side</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">NY</div>
+      <div class="stat-label">Available statewide</div>
+    </div>
+  </div>
+
+  <div class="about">
+    <div class="section-tag">About</div>
+    <h2>I've been on the job sites.<br>I know what should happen — and what doesn't.</h2>
+    <p>Pool contractors are great at selling. They're not always great at delivering. Change orders pile up, timelines slip, and most homeowners don't know enough to push back.</p>
+    <p>I spent over a decade in pool construction across New York and served in the U.S. Army. I know how these projects run — the sequencing, the real costs, the quality benchmarks. <strong>I use that knowledge to protect your investment.</strong></p>
+    <p>I'm not affiliated with any contractor. My only client is you.</p>
+  </div>
+
+  <div class="services">
+    <div class="services-inner">
+      <div class="section-tag">Services</div>
+      <h2>How I can help</h2>
+      <p class="sub">Flat-rate services. No surprises. First call is always free.</p>
+
+      <div class="service-card">
+        <div>
+          <h3>Bid Review</h3>
+          <p>Send me your contractor's proposal before you sign anything. I'll tell you if the price is fair, what's missing, what's padded, and what questions to ask before you write a check.</p>
+        </div>
+        <div class="service-price">$300</div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>Build Oversight</h3>
+          <p>Monthly retainer. I stay involved throughout your entire project — reviewing progress photos, answering your questions, flagging issues early, and keeping the contractor accountable every step of the way.</p>
+        </div>
+        <div class="service-price">$1,500<span style="font-size:0.9rem;">/mo</span></div>
+      </div>
+
+      <div class="service-card">
+        <div>
+          <h3>SOS Audit</h3>
+          <p>Your build went sideways. I'll assess the situation, identify exactly what went wrong, what it'll cost to fix, and hand you a clear path forward — so you know what to do next.</p>
+        </div>
+        <div class="service-price">$500</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="who">
+    <div class="section-tag">Who This Is For</div>
+    <h2>You might need this if...</h2>
+    <div class="who-grid">
+      <div class="who-item">
+        <h4>You're about to sign a contract</h4>
+        <p>Don't sign until someone who knows pool construction has reviewed it. A $300 review can save you thousands.</p>
+      </div>
+      <div class="who-item">
+        <h4>Your build is already underway</h4>
+        <p>Something feels off. Progress is slow. The contractor keeps asking for more money. Get a second set of eyes now.</p>
+      </div>
+      <div class="who-item">
+        <h4>You've gotten multiple bids</h4>
+        <p>They all look different and you don't know what's fair. I'll break it down and tell you exactly what you're looking at.</p>
+      </div>
+      <div class="who-item">
+        <h4>Your build went wrong</h4>
+        <p>Contractor walked off, work looks wrong, you're being ignored. I'll help you understand your situation and your options.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <div class="contact-inner">
+      <h2>Ready to talk?</h2>
+      <p>First conversation is free. Tell me where you're at and I'll tell you how I can help. No pressure, no pitch.</p>
+      <div class="contact-btns">
+        <a class="btn-gold" href="tel:6319491210">Call (631) 949-1210</a>
+        <a class="btn-ghost" href="mailto:Tjjmilich@icloud.com">Tjjmilich@icloud.com</a>
+      </div>
+      <div class="contact-info">
+        Thomas Milich &nbsp;·&nbsp; Pool Construction Consultant<br>
+        New York &nbsp;·&nbsp; Army Veteran
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2026 Pool Build Pro · Thomas Milich · New York</footer>
+
+</body>
+</html>
