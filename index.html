@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thomas Milich | Pool Construction Consultant | New York</title>
+  <title>Back Yard Concepts LLC | Pool Construction & Consulting | New York</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Georgia', serif; color: #1a1a1a; background: #fff; }
@@ -116,10 +116,27 @@
     .about p { font-size: 1rem; line-height: 1.8; color: #444; margin-bottom: 16px; max-width: 620px; }
     .about strong { color: #111; }
 
-    /* SERVICES */
+    /* SERVICES TABS */
     .services { background: #fff; padding: 64px 32px; }
     .services-inner { max-width: 750px; margin: 0 auto; }
-    .services h2 { font-size: 1.8rem; font-weight: 700; color: #111; margin-bottom: 40px; }
+    .services-header { margin-bottom: 40px; }
+    .services-header h2 { font-size: 1.8rem; font-weight: 700; color: #111; margin-bottom: 12px; }
+    .services-header p { font-size: 0.95rem; color: #555; font-family: 'Segoe UI', sans-serif; line-height: 1.6; }
+
+    .tabs { display: flex; gap: 0; margin-bottom: 40px; border-bottom: 2px solid #e5e5e5; }
+    .tab {
+      padding: 12px 28px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #888;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      text-decoration: none;
+    }
+    .tab.active { color: #1a1a1a; border-bottom: 2px solid #1a1a1a; }
+
     .service-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid #e5e5e5; }
     .service-item {
       display: flex;
@@ -179,6 +196,7 @@
       .service-item { flex-direction: column; }
       nav { padding: 16px 20px; }
       .hero { padding: 56px 20px; }
+      .tab { padding: 10px 16px; font-size: 0.82rem; }
     }
   </style>
 </head>
@@ -186,18 +204,18 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">Pool Build Pro</div>
+    <div class="nav-logo">Back Yard Concepts LLC</div>
     <a class="nav-cta" href="tel:6319491210">Call (631) 949-1210</a>
   </nav>
 
   <!-- HERO -->
   <div style="background:#f7f5f2;">
     <div class="hero">
-      <div class="hero-label">New York Pool Construction Consultant</div>
-      <h1>Your pool build deserves<br><em>someone in your corner.</em></h1>
-      <p>I'm a pool construction veteran and Army vet with over a decade on New York job sites. I review bids, flag red flags, and make sure contractors deliver what they promised — without the runaround.</p>
+      <div class="hero-label">Pool Construction & Consulting — New York</div>
+      <h1>Built right.<br><em>From the ground up.</em></h1>
+      <p>Back Yard Concepts LLC handles both sides of your pool project — we build custom gunite pools and we consult homeowners who want an expert in their corner. Army veteran owned. New York based.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="tel:6319491210">Call or Text Me</a>
+        <a class="btn-primary" href="tel:6319491210">Call or Text Us</a>
         <a class="btn-secondary" href="mailto:Tjjmilich@icloud.com">Send an Email</a>
       </div>
     </div>
@@ -212,12 +230,12 @@
       <div class="stat-label">Years in pool construction</div>
     </div>
     <div class="stat">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Working for you, not the contractor</div>
+      <div class="stat-num">NY</div>
+      <div class="stat-label">Based & serving all of New York</div>
     </div>
     <div class="stat">
-      <div class="stat-num">NY</div>
-      <div class="stat-label">Based & available statewide</div>
+      <div class="stat-num">🇺🇸</div>
+      <div class="stat-label">Army veteran owned</div>
     </div>
   </div>
 
@@ -227,19 +245,53 @@
   <div class="about">
     <div class="about-inner">
       <div class="section-label">About</div>
-      <h2>I've been on the job sites.<br>I know what should happen — and what doesn't.</h2>
-      <p>Pool contractors are good at selling. They're not always good at delivering. Change orders pile up, timelines slip, and most homeowners don't know enough to push back.</p>
-      <p>I spent years in pool construction in New York and served in the U.S. Army. I understand how these projects are supposed to run — the sequencing, the costs, the quality benchmarks. <strong>I use that knowledge to protect your investment.</strong></p>
-      <p>I'm not affiliated with any contractor. My only client is you.</p>
+      <h2>We build pools.<br>We also protect homeowners building them.</h2>
+      <p>Back Yard Concepts LLC was built on real job site experience — years of gunite pool construction across New York and a background in the U.S. Army. We know how these projects are supposed to run: the sequencing, the costs, the quality benchmarks.</p>
+      <p>Whether you're hiring us to build your pool or bringing us in to oversee another contractor, <strong>you're getting someone who's been on every side of this process.</strong> We're not affiliated with anyone else. Our only client is you.</p>
     </div>
   </div>
 
   <!-- SERVICES -->
   <div class="services">
     <div class="services-inner">
-      <div class="section-label">Services</div>
-      <h2>How I can help</h2>
-      <div class="service-list">
+      <div class="services-header">
+        <div class="section-label">Services</div>
+        <h2>Construction & Consulting</h2>
+        <p>We offer full pool construction as well as standalone consulting services for homeowners navigating an existing build.</p>
+      </div>
+
+      <div class="tabs">
+        <span class="tab active">Construction</span>
+        <span class="tab" style="margin-left:8px;">Consulting</span>
+      </div>
+
+      <!-- Construction Services -->
+      <div class="service-list" id="construction-services">
+        <div class="service-item">
+          <div class="service-info">
+            <h3>Custom Gunite Pool Build</h3>
+            <p>Full-service pool construction from excavation to finish. We manage the entire process — design, permits, gunite, plumbing, and final walkthrough.</p>
+          </div>
+          <div class="service-price">Call for Quote</div>
+        </div>
+        <div class="service-item">
+          <div class="service-info">
+            <h3>Pool Renovation & Resurfacing</h3>
+            <p>Breathing new life into an existing pool. We resurface, retile, replumb, and update equipment to bring your pool back to full condition.</p>
+          </div>
+          <div class="service-price">Call for Quote</div>
+        </div>
+        <div class="service-item">
+          <div class="service-info">
+            <h3>Site Assessment</h3>
+            <p>Not sure if your yard can support a pool? We'll assess the site, soil, and access to give you a realistic picture before you spend a dollar.</p>
+          </div>
+          <div class="service-price">Call for Quote</div>
+        </div>
+      </div>
+
+      <!-- Consulting Services (hidden by default, shown via JS) -->
+      <div class="service-list" id="consulting-services" style="display:none;">
         <div class="service-item">
           <div class="service-info">
             <h3>Bid Review</h3>
@@ -268,24 +320,24 @@
   <!-- WHY -->
   <div class="why">
     <div class="why-inner">
-      <div class="section-label">Why Me</div>
+      <div class="section-label">Why Us</div>
       <h2>Straight talk from someone who's been there</h2>
       <div class="why-grid">
         <div class="why-point">
           <h4>Real job site experience</h4>
-          <p>I've worked pool construction hands-on. I know what quality looks like at every stage — and I know what corners getting cut looks like too.</p>
+          <p>We've worked pool construction in New York for over a decade. We know what right looks like — and what corners cut look like.</p>
         </div>
         <div class="why-point">
-          <h4>Army veteran</h4>
-          <p>Discipline, accountability, and execution under pressure. I take your project seriously because that's how I was trained.</p>
+          <h4>Army veteran owned</h4>
+          <p>Discipline, accountability, and follow-through aren't buzzwords. They're how we operate on every project.</p>
         </div>
         <div class="why-point">
-          <h4>No contractor relationships</h4>
-          <p>I don't refer contractors, I don't take kickbacks, I don't have side deals. My only interest is making sure you get what you paid for.</p>
+          <h4>No contractor ties</h4>
+          <p>We're not affiliated with any subcontractor or supplier. Our loyalty is to the homeowner — always.</p>
         </div>
         <div class="why-point">
-          <h4>Direct and available</h4>
-          <p>You get my cell. Text or call and I'll respond. No call centers, no scheduling portals, no waiting a week for a reply.</p>
+          <h4>Available statewide</h4>
+          <p>Based in New York, available anywhere in the state. Remote consulting available nationwide.</p>
         </div>
       </div>
     </div>
@@ -294,20 +346,43 @@
   <!-- CONTACT -->
   <div class="contact">
     <div class="contact-inner">
-      <div class="section-label">Get in Touch</div>
-      <h2>Let's talk before you sign anything.</h2>
-      <p>A 15-minute call costs nothing. I'll tell you honestly whether I can help — and what to watch out for.</p>
+      <div class="section-label">Get In Touch</div>
+      <h2>Ready to talk about your project?</h2>
+      <p>Whether you're starting a new build, reviewing a bid, or dealing with a problem mid-construction — reach out. First conversation is always free.</p>
       <div class="contact-btns">
         <a class="btn-white" href="tel:6319491210">Call (631) 949-1210</a>
-        <a class="btn-outline" href="mailto:Tjjmilich@icloud.com">Email Me</a>
+        <a class="btn-outline" href="mailto:Tjjmilich@icloud.com">Send an Email</a>
       </div>
       <div class="contact-details">
-        Thomas Milich &nbsp;·&nbsp; New York &nbsp;·&nbsp; Veteran-Owned
+        Thomas Milich &nbsp;·&nbsp; Back Yard Concepts LLC<br>
+        New York &nbsp;·&nbsp; Tjjmilich@icloud.com
       </div>
     </div>
   </div>
 
-  <footer>© 2026 Pool Build Pro · New York · All rights reserved</footer>
+  <footer>
+    © 2026 Back Yard Concepts LLC · New York · Army Veteran Owned
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const construction = document.getElementById('construction-services');
+    const consulting = document.getElementById('consulting-services');
+
+    tabs[0].addEventListener('click', () => {
+      tabs[0].classList.add('active');
+      tabs[1].classList.remove('active');
+      construction.style.display = 'flex';
+      consulting.style.display = 'none';
+    });
+
+    tabs[1].addEventListener('click', () => {
+      tabs[1].classList.add('active');
+      tabs[0].classList.remove('active');
+      consulting.style.display = 'flex';
+      construction.style.display = 'none';
+    });
+  </script>
 
 </body>
 </html>
